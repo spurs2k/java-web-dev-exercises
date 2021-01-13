@@ -2,7 +2,7 @@ package exercises;
 
 import java.util.Scanner;
 
-public class Alice {
+public class AliceTwo {
 
     public static void main(String[] args) {
         String rawString = "Alice was beginning to get very tired of sitting " +
@@ -16,11 +16,10 @@ public class Alice {
         String searchTerm = input.nextLine().toLowerCase();
         String lowerCaseString = rawString.toLowerCase();
 
-        while(!searchTerm.equals("!")) {
-            Boolean isFound = lowerCaseString.contains(searchTerm);
-            System.out.println(isFound);
-            System.out.println("Please enter another search term.");
-            searchTerm = input.nextLine().toLowerCase();
-        }
+        Integer index = lowerCaseString.indexOf(searchTerm);
+        Integer length = searchTerm.length();
+        System.out.println("Your search term first appears at index " + index + ". Your term is " + length + " characters long");
+        String modifiedString = lowerCaseString.replace(searchTerm, "");
+        System.out.println(modifiedString);
     }
 }
