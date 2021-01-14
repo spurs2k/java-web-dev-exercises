@@ -9,6 +9,5 @@ public class Area {
         Double radius = input.nextDouble();
         Double circleArea = Circle.getArea(radius);
         System.out.println("The area of a circle with a radius of " + radius + " is: " + circleArea + ".");
-
     }
 }
